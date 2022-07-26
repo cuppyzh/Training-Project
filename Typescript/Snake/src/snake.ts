@@ -10,6 +10,7 @@ class SnakeBody {
 
 class Snake {
     Body: SnakeBody[]
+    Direction: string = 'D'
 
     constructor(){
         this.Body = [new SnakeBody(10,10)]
@@ -20,8 +21,16 @@ class Snake {
         return this.Body[0]
     }
 
-    Move(evt : KeyboardEvent){
-        
+    Move(){
+        if (this.Direction == 'D') {
+            this.Body[0].X += 10
+        } else if (this.Direction == 'S') {
+            this.Body[0].Y += 10
+        } else if (this.Direction == 'W') {
+            this.Body[0].Y -= 10
+        } else if (this.Direction == 'A') {
+            this.Body[0].X -= 10
+        }
     }
 
     DrawSnake(ctx: CanvasRenderingContext2D) {

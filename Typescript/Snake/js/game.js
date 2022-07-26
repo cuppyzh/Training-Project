@@ -9,11 +9,34 @@ window.onload = () => {
         alert('Canvas is not supported by the browser');
         return;
     }
-    alert('Canvas is supported by the browser');
+    // alert('Canvas is supported by the browser')
     ctx = canvas.getContext('2d');
     ctx.fillStyle = "rgb(0,200,00)";
     Tests();
+    setInterval(MoveSnake, 100);
 };
+window.addEventListener('keypress', (evt) => {
+    if (evt.key.toUpperCase() == 'W' && snake.Direction != 'S') {
+        snake.Direction = 'W';
+        return;
+    }
+    if (evt.key.toUpperCase() == 'S' && snake.Direction != 'W') {
+        snake.Direction = 'S';
+        return;
+    }
+    if (evt.key.toUpperCase() == 'A' && snake.Direction != 'D') {
+        snake.Direction = 'A';
+        return;
+    }
+    if (evt.key.toUpperCase() == 'D' && snake.Direction != 'A') {
+        snake.Direction = 'D';
+        return;
+    }
+});
+function MoveSnake() {
+    snake.Move();
+    snake.DrawSnake(ctx);
+}
 function InitGame() {
 }
 function Tests() {
