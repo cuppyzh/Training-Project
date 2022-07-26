@@ -1,0 +1,29 @@
+{
+    "name": "bytes",
+    "version": "0.0.1",
+    "description": "Snake Game via HTML5 + Typescript for learning purpose. Reference: https://itnext.io/build-a-snake-game-in-typescript-8bee5b9f1ec6",
+    "main": "",
+    "type": "module",
+    "scripts": {
+      "start": "tsc && serve",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "",
+      "url": ""
+    },
+    "keywords": [
+      "snake",
+      "game",
+      "retro",
+      "bytes",
+      "oldschool"
+    ],
+    "author": "Yusuf Anugrah Putra Aditama",
+    "license": "MIT",
+    "bugs": {
+      "url": ""
+    },
+    "homepage": "",
+    "dependencies": {}
+  }
